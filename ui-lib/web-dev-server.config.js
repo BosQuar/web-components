@@ -9,7 +9,7 @@ export default /** @type {import('@web/dev-server').DevServerConfig} */ ({
   watch: !hmr,
   /** Resolve bare module imports */
   nodeResolve: {
-    exportConditions: ['browser', 'development'],
+    exportConditions: ['browser', 'production'],
   },
 
   /** Compile JS for older browsers. Requires @web/dev-server-esbuild plugin */

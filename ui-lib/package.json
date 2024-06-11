@@ -3,7 +3,7 @@
   "description": "Webcomponent odevo following open-wc recommendations",
   "license": "MIT",
   "author": "odevo",
-  "version": "0.0.5",
+  "version": "0.0.9",
   "type": "module",
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",

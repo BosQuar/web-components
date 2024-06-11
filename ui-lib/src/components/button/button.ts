@@ -5,8 +5,10 @@ import { customElement, property } from 'lit/decorators.js';
 export class OdevoButton extends LitElement {
   static override styles = css`
     .button {
-      display: block;
-      background-color: red;
+      background: var(--button-color);
+      border-radius: 4px;
+      padding: 8px 16px;
+      cursor: pointer;
     }
   `;
 
@@ -24,7 +26,9 @@ export class OdevoButton extends LitElement {
   @property({ reflect: true }) size: 'small' | 'medium' | 'large' = 'medium';
 
   override render() {
-    return html` <button @click=${this.handleClick}>Edit</button> `;
+    return html`
+      <button class="button" @click=${this.handleClick}>Edit</button>
+    `;
   }
 
   private handleClick() {

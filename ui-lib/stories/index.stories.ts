@@ -1,13 +1,30 @@
 import { html, TemplateResult } from 'lit';
-import '../src/foo-bar.js';
+import '../src/components/button/button.js';
 
 export default {
-  title: 'FooBar',
-  component: 'foo-bar',
+  title: 'Button',
+  component: 'odv-button',
   argTypes: {
-    header: { control: 'text' },
-    counter: { control: 'number' },
-    textColor: { control: 'color' },
+    variant: {
+      control: {
+        type: 'select',
+        options: [
+          'default',
+          'primary',
+          'success',
+          'neutral',
+          'warning',
+          'danger',
+          'text',
+        ],
+      },
+    },
+    size: {
+      control: {
+        type: 'select',
+        options: ['small', 'medium', 'large'],
+      },
+    },
   },
 };
 
@@ -17,36 +34,8 @@ interface Story<T> {
   argTypes?: Record<string, unknown>;
 }
 
-interface ArgTypes {
-  header?: string;
-  counter?: number;
-  textColor?: string;
-  slot?: TemplateResult;
-}
+interface ArgTypes {}
 
-const Template: Story<ArgTypes> = ({
-  header = 'Hello world',
-  counter = 5,
-  textColor,
-  slot,
-}: ArgTypes) => html` <odv-test> </odv-test> `;
+const Template: Story<ArgTypes> = () => html` <odv-button> </odv-button> `;
 
 export const Regular = Template.bind({});
-
-export const CustomHeader = Template.bind({});
-CustomHeader.args = {
-  header: 'My header',
-};
-
-export const CustomCounter = Template.bind({});
-CustomCounter.args = {
-  counter: 123456,
-};
-
-export const SlottedContent = Template.bind({});
-SlottedContent.args = {
-  slot: html`<p>Slotted content</p>`,
-};
-SlottedContent.argTypes = {
-  slot: { table: { disable: true } },
-};
