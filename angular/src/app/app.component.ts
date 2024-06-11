@@ -5,7 +5,7 @@ import '../../node_modules/@odevo/ui/src/index';
 @Component({
   selector: 'app-root',
   template: `<div id="page">
-    <odv-test></odv-test>
+    <odv-button></odv-button>
   </div>`,
   styleUrl: './app.component.scss',
 })
