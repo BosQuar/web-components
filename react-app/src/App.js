@@ -3,7 +3,7 @@ import '@odevo/ui'
 function App() {
   return (
     <div className="App">
-      <odv-test></odv-test>
+      <odv-button></odv-button>
     </div>
   );
 }
