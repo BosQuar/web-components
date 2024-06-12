@@ -2,11 +2,8 @@
 @import "../node_modules/@odevo/ui/src/styles/root-styles.css";
 
 html {
-  &.rendal {
-    --color-primary: purple;
-  }
-
-  &.rittner {
-    --color-primary: turquoise;
-  }
+  --color-primary: green;
 }
+
+@import "styles/rittner.scss";
+@import "styles/rendal.scss";
