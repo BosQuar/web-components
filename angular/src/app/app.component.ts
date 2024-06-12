@@ -5,7 +5,7 @@ import '../../node_modules/@odevo/ui/src/index';
 @Component({
   selector: 'app-root',
   template: `<div id="page">
-    <h1 class="title">Im a title</h1>
+    <h1>Angular</h1>
     <odv-button></odv-button>
   </div>`,
   styleUrl: './app.component.scss',
