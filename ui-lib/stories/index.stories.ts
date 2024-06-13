@@ -36,6 +36,9 @@ interface Story<T> {
 
 interface ArgTypes {}
 
-const Template: Story<ArgTypes> = () => html` <odv-button> </odv-button> `;
+const Template: Story<ArgTypes> = () => html`
+  <h1>Storybook</h1>
+  <odv-button> </odv-button>
+`;
 
 export const Regular = Template.bind({});

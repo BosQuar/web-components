@@ -7,6 +7,14 @@
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
     <style>
+      :root {
+        --color-primary: #007bff;
+        --color-secondary: #6c757d;
+        --color-success: #28a745;
+
+        --button-color: var(--color-primary);
+      }
+
       body {
         background: #fafafa;
       }
@@ -15,19 +23,15 @@
   <body>
     <div id="demo"></div>
 
-    <!--   <script type="module">
-    import { html, render } from 'lit';
-    import '../dist/src/foo-bar.js';
+    <script type="module">
+      import { html, render } from 'lit';
+      import '../dist/src/index.js';
 
-    const header = 'Hello owc World!';
-    render(
-      html`
-        <foo-bar .header=${header}>
-          some light-dom
-        </foo-bar>
-      `,
-      document.querySelector('#demo')
-    );
-  </script> -->
+      const header = 'Hello owc World!';
+      render(
+        html` <odv-button .header=${header}> some light-dom </odv-button> `,
+        document.querySelector('#demo'),
+      );
+    </script>
   </body>
 </html>
